@@ -15,28 +15,54 @@
         html {
             height: 100%;
             display: flex;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
         }
 
         body {
             font-family: "Source Serif Pro", serif;
             text-align: center;
             margin: auto;
+            height: 100%;
+            width: 100%;
         }
 
         h1, h2, h3 {
             font-family: "Source Sans Pro", sans-serif;
         }
 
-        #intro {
+        .page {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+
+        #greeting {
             font-size: 60px;
+        }
+
+        #page2 {
+            background-color: #eee;
         }
     </style>
 </head>
 <body>
-    <h1 id="intro">Hi! I'm Bryant Park.</h1>
-    <h3>(No, not <a href="https://en.wikipedia.org/wiki/Bryant_Park">that</a> Bryant Park.)</h3>
-
-    <p>I'm currently an undergraduate at Cornell University, studying <strong>Computer Science</strong> with a minor in <strong>Electrical and Computer Engineering</strong>.</p>
-    <p>Currently, my interests lie in software engineering, mobile/web development, and machine learning.</p>
+    <div class="page" id="page1">
+        <div class="container">
+            <h1 id="greeting">Hi! I'm Bryant Park.</h1>
+            <h3>(No, not <a href="https://en.wikipedia.org/wiki/Bryant_Park">that</a> Bryant Park.)</h3>
+        
+            <p>I'm currently an undergraduate at Cornell University, studying <strong>Computer Science</strong> with a minor in <strong>Electrical and Computer Engineering</strong>.</p>
+            <p>Currently, my interests lie in software engineering, mobile/web development, and machine learning.</p>
+        </div>
+    </div>
+    <div class="page" id="page2">
+        <div class="container"></div>
+    </div>
+    <div class="page" id="page3">
+        <div class="container"></div>
+    </div>
 </body>
 </html>
