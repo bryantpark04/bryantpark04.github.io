@@ -37,6 +37,12 @@
             flex-direction: column;
             justify-content: center;
             scroll-snap-align: start;
+            gap: 40px;
+        }
+
+        .navigation-arrow > :is(a, a:visited) {
+            text-decoration: inherit;
+            color: inherit;
         }
 
         #greeting {
@@ -57,11 +63,23 @@
             <p>I'm currently an undergraduate at Cornell University, studying <strong>Computer Science</strong> with a minor in <strong>Electrical and Computer Engineering</strong>.</p>
             <p>Currently, my interests lie in software engineering, mobile/web development, and machine learning.</p>
         </div>
+        <div class="navigation-arrow">
+            <a href="#page2">&#8595</a>
+        </div>
     </div>
     <div class="page" id="page2">
+        <div class="navigation-arrow">
+            <a href="#page1">&#8593</a>
+        </div>
         <div class="container"></div>
+        <div class="navigation-arrow">
+            <a href="#page3">&#8595</a>
+        </div>
     </div>
     <div class="page" id="page3">
+        <div class="navigation-arrow">
+            <a href="#page2">&#8593</a>
+        </div>
         <div class="container"></div>
     </div>
 </body>
