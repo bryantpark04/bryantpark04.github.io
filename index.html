@@ -18,6 +18,7 @@
             scroll-behavior: smooth;
             scroll-snap-type: y mandatory;
         }
+        /* TODO: disable scroll snapping on mobile */
 
         body {
             font-family: "Source Serif Pro", serif;
@@ -49,6 +50,10 @@
             justify-content: center;
             scroll-snap-align: start;
             gap: 40px;
+        }
+
+        .page > * {
+            padding: 20px;
         }
 
         .navigation-arrow > :is(a, a:visited) {
